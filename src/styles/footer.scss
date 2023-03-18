@@ -1,0 +1,50 @@
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ECEAEA;
+  height: vh(96px);
+
+  &__container {
+    width: vw(1216px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: vw(449px);
+    img {
+      width: vw(14px);
+      height: vw(14px);
+      span {
+        font-size: vw(14px);
+      }
+    }
+  }
+  &__address {
+
+    img {
+      width: vw(14px);
+      height: vw(14px);
+      span {
+        font-size: vw(14px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .footer {
+
+    &__contacts {
+      width: mobile_vw(449px);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "functions";
+
+.nav-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    width: vw(48px);
+    height: vw(48px);
+    margin-right: vw(48px);
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    li {
+      font-size: vw(16px);
+      margin-right: vw(48px);
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-menu{
+    width: mobile_vw(519px);
+
+    &__logo {
+      width: mobile_vw(48px);
+      height: mobile_vw(48px);
+    }
+    &__list {
+      li {
+
+      }
+    }
+  }
+
+}

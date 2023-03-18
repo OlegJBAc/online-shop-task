@@ -1,0 +1,21 @@
+.products {
+  flex-grow: 5;
+  width: vw(1216px);
+  margin: 0 auto;
+  padding-top: vh(10px);
+  height: 100%;
+  &__title {
+    font-size: vw(24px);
+    font-weight: 700;
+  }
+}
+.cards {
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

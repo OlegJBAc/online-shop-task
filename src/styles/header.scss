@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: vh(96px);
+  border-bottom: 1px solid #E1E1E1;
+  &__container {
+    width: vw(1216px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__filter {
+    height: vh(48px);
+    input {
+      background: rgba(0, 0, 0, 0);
+      border: 1px solid #E1E1E1;
+      width: vw(416px);
+      padding: vh(10px) vw(20px);
+      color: #9F9F9F;
+      height: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

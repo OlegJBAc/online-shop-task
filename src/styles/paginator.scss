@@ -1,0 +1,18 @@
+
+
+.paginator {
+  width: 100%;
+  margin: vh(20px) 0;
+  button {
+    background: #d7d3d3;
+    padding: vh(8px) vw(12px);
+    border: none;
+    margin-right: vw(5px);
+    color: #171616;
+    cursor: pointer;
+    &.current {
+      background: #9F9F9F;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.cards {
+  &__item {
+    width: vw(280px);
+    min-height: vw(328px);
+    border: 1px solid #E1E1E1;
+    margin-bottom: vh(20px);
+  }
+  &__image {
+      width: vw(280px);
+      height: vw(160px);
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: vw(130px);
+    margin: vh(20px) vw(24px) vh(32px) vw(24px);
+  }
+  &__title {
+    font-size: vw(18px);
+    margin: vh(10px) vw(30px) vh(10px) vw(10px);
+  }
+  &__buy {
+    display: flex;
+    align-items: center;
+  }
+  &__price {
+    margin-right: vw(21px);
+  }
+  &__info {
+    padding: vh(10px) vw(24px) vh(26px) vw(24px);
+  }
+}
