@@ -65,7 +65,6 @@ export default {
   },
   methods: {
     changeProductInBasket() {
-      console.log('ko')
       this.$emit('changeProductInBasket', this.productId, this.isItemInBasket ? 'delete' : 'send')
     },
 
