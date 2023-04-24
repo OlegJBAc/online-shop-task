@@ -6,7 +6,13 @@
       <h2 class="products__title">
         Товары
       </h2>
-      <Paginator
+      <button class="show-paginator"
+              :class="{ shown: isShowPaginator}"
+              @click="showPaginator"
+      >
+        {{isShowPaginator ? 'Скрыть' : 'Показать'}} пагинатор
+      </button>
+      <Paginator v-if="isShowPaginator"
                  :totalItemsCount="getProductsComputed.length"
                  @changePage="setCurrentPageProducts"
                  :currentPage="currentPage"
@@ -36,11 +42,15 @@
 </template>
 
 <script>
+
+import {defineAsyncComponent} from "vue";
+
 import VButton from "@/components/pages/pagesElements/VButton.vue";
 import ProductCard from "@/components/pages/pagesElements/ProductCard.vue";
-import Paginator from "@/components/pages/pagesElements/Paginator.vue";
 import { mapActions } from "vuex";
 import Loader from "@/components/appElements/Loader.vue";
+
+const Paginator = defineAsyncComponent(() => import( /* webpackChunkName: "Paginator" */"@/components/pages/pagesElements/Paginator.vue"))
 
 export default {
   components: {
@@ -62,6 +72,7 @@ export default {
       },
       pageLoading: false,
 
+      isShowPaginator: false,
     }
   },
   computed: {
@@ -74,6 +85,9 @@ export default {
       'getProducts',
     ]),
 
+    showPaginator() {
+      this.isShowPaginator = !this.isShowPaginator
+    },
     setCurrentPageProducts(page) {
       const firstCurrentPageProduct = (page - 1) * this.pageSize
       const lastCurrentPageProduct = firstCurrentPageProduct + this.pageSize
