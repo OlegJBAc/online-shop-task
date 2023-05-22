@@ -13,16 +13,19 @@
 
 <script>
 import Header from './components/appElements/Header.vue'
-import Footer from "@/components/appElements/Footer.vue";
+import Footer from '@/components/appElements/Footer.vue'
 
 export default {
   name: 'app',
+
+  inject: ['test'],
+
   components: {
     Footer,
     Header,
   },
-  created() {
-
+  mounted() {
+    console.log(this)
   }
 }
 

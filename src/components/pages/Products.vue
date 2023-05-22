@@ -19,6 +19,11 @@
                  :pageSize="pageSize"
       />
       <div class="cards">
+
+
+      <!--    For RTB     -->
+
+
         <ul class="cards__list">
           <ProductCard v-for="product in currentPageProducts"
                        :title="product.title"

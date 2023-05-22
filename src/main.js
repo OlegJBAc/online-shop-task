@@ -5,8 +5,10 @@ import store from './store/index'
 
 require('./API/instance')
 
+const app =  createApp(App)
 
-createApp(App)
+app
     .use(store)
     .use(router)
+    .provide('test', 'HELLLOOOOOOOO')
     .mount('#app')
